@@ -14,18 +14,24 @@ function App() {
   const [theme, setTheme] = useState("light");
   const [check, setCheck] = useState(true);
   const [UIData, setUIData] = useState([]);
-
+  const [errorMsg, setErrorMsg] = useState("");
   const fetchDictInfo = async (searchParams) => {
+    if (window.navigator.onLine === false) {
+      setErrorMsg("You are offline");
+      return;
+    }
     try {
       const response = await fetch(
         `https://api.dictionaryapi.dev/api/v2/entries/en/${searchParams}`
       );
+      if (!response.ok) throw new Error("word not found in the dictionary");
 
       const data = await response.json();
 
       setUIData(data);
     } catch (error) {
-      console.error(error);
+      console.log(error.message);
+      setErrorMsg("Word not found");
     }
   };
 
@@ -35,7 +41,7 @@ function App() {
   };
 
   const handleTheme = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
   const handleCheck = () => {
@@ -49,7 +55,7 @@ function App() {
       refVal.current = false;
       return;
     }
-    setCheck(() => (check === true ? false : true));
+    setCheck((prev) => (prev === true ? false : true));
   }, [theme]);
 
   return (
@@ -61,7 +67,7 @@ function App() {
         toggleChecked={check}
       />
       <SearchBar getUserInput={fetchDictInfo} />
-      <WordInfo UIRender={UIData[0]} />
+      {errorMsg ? <h1>{errorMsg}</h1> : <WordInfo UIRender={UIData[0]} />}
     </div>
   );
 }

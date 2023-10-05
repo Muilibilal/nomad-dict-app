@@ -6,7 +6,7 @@ import Pagefont from "./PageFont/Pagefont";
 
 const NavSection = ({ changeFont, changeTheme, toggleChecked, checkInput }) => {
   return (
-    <>
+    <nav>
       <img src={logoIcon} className="nav--logo" alt="logo" />
 
       <div className={styles["nav--right"]}>
@@ -18,12 +18,13 @@ const NavSection = ({ changeFont, changeTheme, toggleChecked, checkInput }) => {
             className={styles["theme-button"]}
             checked={toggleChecked}
             onClick={checkInput}
-          ></input>
+            onChange={checkInput}
+          />
 
           <img src={moonIcon} alt="switch theme icon" onClick={changeTheme} />
         </div>
       </div>
-    </>
+    </nav>
   );
 };
 

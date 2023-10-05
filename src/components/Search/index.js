@@ -20,6 +20,7 @@ const SearchBar = ({ getUserInput }) => {
         type="text"
         name="word"
         onChange={handleChange}
+        placeholder="Search for any word..."
       />
       <button onClick={handleSubmit}>
         <img src={searchIcon} alt="word Search icon" />
