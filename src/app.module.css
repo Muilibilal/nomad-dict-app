@@ -1,0 +1,47 @@
+.serif {
+  font-family: serif;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+.sans-serif {
+  font-family: sans-serif;
+}
+
+.light {
+  background-color: #fff;
+  color: #0a0a0a;
+  animation: activeLight 500ms ease-out;
+}
+
+.dark {
+  background-color: #0a0a0a;
+  color: #fff;
+  animation: activeDark 500ms ease-in;
+}
+
+/* .active {
+  opacity: 1;
+} */
+
+@keyframes activeLight {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes activeDark {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
