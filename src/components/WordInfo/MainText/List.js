@@ -6,7 +6,7 @@ const List = ({ defVal }) => {
       <li>{defVal.definition}</li>
       {defVal.synonyms.length > 0 ? (
         <div>
-          Synonyms: <span>{defVal.synonyms}</span>
+          Synonyms: <span>{defVal.synonyms.join(", ")}</span>
         </div>
       ) : (
         ""

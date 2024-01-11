@@ -15,6 +15,9 @@ function App() {
   const [check, setCheck] = useState(true);
   const [UIData, setUIData] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
+
+  let savedValue = JSON.parse(localStorage.getItem("word"));
+
   const fetchDictInfo = async (searchParams) => {
     if (window.navigator.onLine === false) {
       setErrorMsg("You are offline");
@@ -34,6 +37,11 @@ function App() {
       setErrorMsg("Word not found");
     }
   };
+
+  useEffect(() => {
+    console.log(savedValue);
+    fetchDictInfo(savedValue);
+  }, [savedValue]);
 
   const handleFont = (e) => {
     let value = e.target.value;
@@ -59,15 +67,27 @@ function App() {
   }, [theme]);
 
   return (
-    <div className={`${styles[fontFamily]} ${styles[theme]}`}>
-      <NavSection
-        changeFont={handleFont}
-        changeTheme={handleTheme}
-        checkInput={handleCheck}
-        toggleChecked={check}
-      />
-      <SearchBar getUserInput={fetchDictInfo} />
-      {errorMsg ? <h1>{errorMsg}</h1> : <WordInfo UIRender={UIData[0]} />}
+    <div className={`content--wrapper ${styles[fontFamily]} ${styles[theme]}`}>
+      <header>
+        <NavSection
+          changeFont={handleFont}
+          changeTheme={handleTheme}
+          checkInput={handleCheck}
+          toggleChecked={check}
+          passedTheme={theme}
+        />
+
+        <SearchBar
+          getUserInput={fetchDictInfo}
+          resetErrorMessage={setErrorMsg}
+          passedTheme={theme}
+          font={fontFamily}
+        />
+      </header>
+
+      <main>
+        {errorMsg ? <h1>{errorMsg}</h1> : <WordInfo UIRender={UIData[0]} />}
+      </main>
     </div>
   );
 }

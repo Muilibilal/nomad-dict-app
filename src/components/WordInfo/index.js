@@ -22,7 +22,7 @@ const WordInfo = ({ UIRender }) => {
 
   function UIGenerated(data) {
     if (!data) return;
-    let { text, audio } = data.phonetics[0];
+    let { text, audio } = data?.phonetics.length > 0 && data.phonetics[0];
 
     return {
       word: data.word,
@@ -47,7 +47,7 @@ const WordInfo = ({ UIRender }) => {
 
   return (
     <>
-      <main>
+      <section>
         <div>
           <h2>{generatedData.word}</h2>
           <span>
@@ -59,7 +59,7 @@ const WordInfo = ({ UIRender }) => {
             <img src={playIcon} alt="play audio" />
           </button>
         </div>
-      </main>
+      </section>
 
       {/* For each of the wordData, create a MainText component and pass the required props */}
       {wordMeaningData.meanings.map((value) => {

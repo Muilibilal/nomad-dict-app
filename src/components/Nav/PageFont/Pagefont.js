@@ -1,14 +1,19 @@
-// import styles from "./pagefont.module.css";
+import styles from "./pagefont.module.css";
 
-const Pagefont = ({ font }) => {
+const Pagefont = ({ font, selectTheme }) => {
   return (
-    <>
-      <select name="key" onChange={font}>
+    <div className={styles["controls-cont"]}>
+      <select
+        name="key"
+        className={`${styles["select-menu"]} ${styles["theme-switch"]}`}
+        onChange={font}
+        style={{ fontFamily: font, color: selectTheme }}
+      >
         <option value="serif">Serif</option>
         <option value="mono">Mono</option>
         <option value="sans-serif">Sans Serif</option>
       </select>
-    </>
+    </div>
   );
 };
 
