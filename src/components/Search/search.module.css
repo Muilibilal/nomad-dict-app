@@ -5,6 +5,8 @@
   border-radius: 10px;
   padding: 5px 20px;
   margin: 20px 0;
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 div {
@@ -16,6 +18,9 @@ div button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.search-parent button {
   font-size: 20px;
   position: absolute;
   top: 30px;

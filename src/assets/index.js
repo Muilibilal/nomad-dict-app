@@ -6,6 +6,7 @@ import searchIcon from "./icon-search.svg";
 import copyIcon from "./icons copy.svg";
 import iconGen from "./icons.svg";
 import logoIcon from "./logo.svg";
+import externalIcon from "./icon-new-window.svg";
 
 export {
   arrowDownIcon,
@@ -16,4 +17,5 @@ export {
   copyIcon,
   iconGen,
   logoIcon,
+  externalIcon,
 };

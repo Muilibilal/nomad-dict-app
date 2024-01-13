@@ -12,10 +12,14 @@ nav div:last-child {
   position: relative;
 }
 
-.theme-switch img {
+.theme-switch .hide-moon {
   position: absolute;
   left: 0;
   opacity: 0;
+}
+
+.theme-switch img {
+  margin-left: 10px;
 }
 
 .switch {
@@ -24,6 +28,7 @@ nav div:last-child {
   width: 45px;
   height: 22px;
   pointer-events: none;
+  cursor: pointer;
 }
 
 /* Hide default HTML checkbox */

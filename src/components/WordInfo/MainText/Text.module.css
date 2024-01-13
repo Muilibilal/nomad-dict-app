@@ -1,0 +1,70 @@
+.part-of-speech {
+  display: flex;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.part-of-speech h3 {
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+.part-of-speech hr {
+  display: block;
+  width: 100%;
+  align-self: center;
+  border: 1px solid var(--clr-neutral-200);
+}
+
+.word-content p {
+  font-size: 1.2rem;
+  color: var(--clr-neutral-400);
+  margin-bottom: 20px;
+}
+
+.word-content ul {
+  margin-left: 40px;
+  color: var(--clr-neutral-500);
+}
+
+.word-content ul {
+  list-style: none; /* Remove default bullets */
+}
+
+.word-content ul li {
+  padding: 10px 0;
+  font-size: 1.05rem;
+}
+
+.word-content ul li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--clr-accent-400); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.synonym-cont {
+  font-size: 1.2rem;
+  color: var(--clr-neutral-400);
+  margin-top: 40px;
+}
+
+.synonym-cont span {
+  color: var(--clr-accent-400);
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.example {
+  display: block;
+  margin: 20px 0 10px 40px;
+  font-size: 1.2rem;
+  color: var(--clr-neutral-400);
+}
+
+.example hr {
+  display: block;
+  margin: 20px 0;
+}

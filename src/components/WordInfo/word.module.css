@@ -1,0 +1,45 @@
+.word-audio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+.word-audio div:first-child h2 {
+  font-size: clamp(1rem, -0.325rem + 7.067vw, 3.65rem);
+}
+
+.word-audio div:first-child span {
+  display: block;
+  margin: 10px 0;
+}
+
+.word-audio div:first-child span i {
+  font-style: italic;
+  font-size: clamp(1rem, 0.75rem + 1.333vw, 1.5rem);
+  color: #a445ed;
+}
+
+.audio-button button img {
+  width: 60px;
+  max-width: 100%;
+}
+
+.source-cont {
+  display: block;
+  padding: 20px 0;
+  margin-top: 50px;
+  border-top: 2px solid var(--clr-neutral-200);
+  color: var(--clr-neutral-400);
+  font-size: 1.05rem;
+}
+
+.source-link {
+  margin-left: 20px;
+  /* color: var(--clr-neutral-500); */
+}
+
+.source-link img {
+  width: 15px;
+  margin-left: 5px;
+}

@@ -9,6 +9,8 @@ import WordInfo from "./components/WordInfo";
 import "./App.css";
 import styles from "./app.module.css";
 
+// TODO: Check style guide
+
 function App() {
   const [fontFamily, setFontFamily] = useState("serif");
   const [theme, setTheme] = useState("light");
@@ -86,7 +88,11 @@ function App() {
       </header>
 
       <main>
-        {errorMsg ? <h1>{errorMsg}</h1> : <WordInfo UIRender={UIData[0]} />}
+        {errorMsg ? (
+          <h1 style={{ textAlign: "left", marginTop: "20px" }}>{errorMsg}</h1>
+        ) : (
+          <WordInfo UIRender={UIData[0]} passedTheme={theme} />
+        )}
       </main>
     </div>
   );

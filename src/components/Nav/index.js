@@ -32,6 +32,12 @@ const NavSection = ({
             <span className={`${styles["slider"]} ${styles["round"]}`}></span>
           </label>
 
+          <img
+            src={moonIcon}
+            alt="switch theme icon"
+            onClick={changeTheme}
+            className={styles["hide-moon"]}
+          />
           <img src={moonIcon} alt="switch theme icon" onClick={changeTheme} />
         </div>
       </div>
