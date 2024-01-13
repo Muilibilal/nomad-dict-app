@@ -12,6 +12,10 @@ This is a solution to the [Dictionary web app challenge](https://www.frontendmen
   - [Screenshot](#screenshot)
   - [Links](#links)
   - [Built with](#built-with)
+  - [Get started](#get-started)
+      - [clone project](#clone-project)
+      - [install dependencies](#install-dependencies)
+      - [start project on local server](#start-project-on-local-server)
   - [Author:](#author)
 
 ## Overview
@@ -37,13 +41,32 @@ Users are able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/dictionary-app-using-react-and-tailwind-dl-\_MuX5Ld](https://www.frontendmentor.io/solutions/dictionary-app-using-react-and-tailwind-dl-_MuX5Ld)
-- Live Site URL: [https://dictionary-react-application.vercel.app/](https://dictionary-react-application.vercel.app/)
+- Live Site URL: [https://nomad-dict.netlify.app/](https://nomad-dict.netlify.app/)
 
 ### Built with
 
 - [React](https://reactjs.org/) - JS library
 - CSS modules
+
+### Get started
+
+##### clone project
+
+```bash
+git clone <repo link>
+```
+
+##### install dependencies
+
+```bash
+npm install
+```
+
+##### start project on local server
+
+```bash
+npm start
+```
 
 ### Author:
 
