@@ -1,32 +1,35 @@
-# Frontend Mentor - Dictionary web app solution
+## Frontend Mentor - Dictionary web app solution
 
-This is a solution to the [Dictionary web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+![](./public/screenshot.png)
+This is a solution to the [Dictionary web app challenge](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL).
 
 ## Table of contents
 
+- [Frontend Mentor - Dictionary web app solution](#frontend-mentor---dictionary-web-app-solution)
+- [Table of contents](#table-of-contents)
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
-- [Author](#author)
+  - [Author:](#author)
 
 ## Overview
 
 ### The challenge
 
-Users should be able to:
+Users are able to:
 
-- Search for words using the input field
-- See the Free Dictionary API's response for the searched word
-- See a form validation message when trying to submit a blank form
-- Play the audio file for a word when it's available
-- Switch between serif, sans serif, and monospace fonts
-- Switch between light and dark themes
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
+- [x] Search for words using the input field
+- [x] See the Free Dictionary API's response for the searched word
+- [x] See a form validation message when trying to submit a blank form
+- [x] Play the audio file for a word when it's available
+- [x] Switch between serif, sans serif, and monospace fonts
+- [x] Switch between light and dark themes
+- [x] View the optimal layout for the interface depending on their device's screen size
+- [x] See hover and focus states for all interactive elements on the page
+
+- [ ] Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 
 ### Screenshot
 
@@ -37,18 +40,11 @@ Users should be able to:
 - Solution URL: [https://www.frontendmentor.io/solutions/dictionary-app-using-react-and-tailwind-dl-\_MuX5Ld](https://www.frontendmentor.io/solutions/dictionary-app-using-react-and-tailwind-dl-_MuX5Ld)
 - Live Site URL: [https://dictionary-react-application.vercel.app/](https://dictionary-react-application.vercel.app/)
 
-## My process
-
 ### Built with
 
-- React
-- Tailwind CSS
-- Flexbox
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Tailwind](https://tailwindcss.com/) - Tailwind CSS
+- CSS modules
 
-## Author
+### Author:
 
-- Frontend Mentor - [@flxemt](https://www.frontendmentor.io/profile/flxemt)
-- Twitter - [@flxemt](https://twitter.com/flxemt)
+Frontend Mentor - [@bilal](https://www.frontendmentor.io/profile/M-Bilal1)

@@ -38,16 +38,20 @@ header nav > img {
   font-family: "Inter", sans-serif;
 }
 
-.light {
-  background-color: var(--clr-neutral-50);
-  color: var(--clr-neutral-800);
-  animation: activeLight 500ms ease-out;
+@media (prefers-color-scheme: dark) {
+  .dark {
+    background-color: var(--clr-neutral-800);
+    color: var(--clr-neutral-50);
+    animation: activeDark 500ms ease-in;
+  }
 }
 
-.dark {
-  background-color: var(--clr-neutral-800);
-  color: var(--clr-neutral-50);
-  animation: activeDark 500ms ease-in;
+@media (prefers-color-scheme: light) {
+  .light {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-800);
+    animation: activeLight 500ms ease-out;
+  }
 }
 
 @keyframes activeLight {

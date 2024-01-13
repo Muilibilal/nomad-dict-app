@@ -9,8 +9,6 @@ import WordInfo from "./components/WordInfo";
 import "./App.css";
 import styles from "./app.module.css";
 
-// TODO: Check style guide
-
 function App() {
   const [fontFamily, setFontFamily] = useState("serif");
   const [theme, setTheme] = useState("light");
@@ -25,14 +23,19 @@ function App() {
       setErrorMsg("You are offline");
       return;
     }
+
     try {
+      if (searchParams.trim() === "") {
+        setErrorMsg("Please enter a word");
+        return;
+      }
+
       const response = await fetch(
         `https://api.dictionaryapi.dev/api/v2/entries/en/${searchParams}`
       );
+
       if (!response.ok) throw new Error("word not found in the dictionary");
-
       const data = await response.json();
-
       setUIData(data);
     } catch (error) {
       console.log(error.message);
