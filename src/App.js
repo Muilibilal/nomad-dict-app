@@ -16,7 +16,7 @@ function App() {
   const [UIData, setUIData] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
 
-  let savedValue = JSON.parse(localStorage.getItem("word"));
+  let savedValue = JSON.parse(localStorage.getItem("word")) ?? "keyboard";
 
   const fetchDictInfo = async (searchParams) => {
     if (window.navigator.onLine === false) {
@@ -44,7 +44,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(savedValue);
     fetchDictInfo(savedValue);
   }, [savedValue]);
 
